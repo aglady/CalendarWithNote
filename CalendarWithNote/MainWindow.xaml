@@ -15,9 +15,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Предыдущий месяц" Margin="5" FontSize="20"/>
-            <Label Content="{Binding Path=CurrentMonth, StringFormat=MM:yyyy}" FontSize="30"/>
-            <Button Content="Следующий месяц" Margin="5" FontSize="20"/>
+            <Button Content="&lt;&lt; Предыдущий месяц" Margin="5" FontSize="20"/>
+            <Label Content="{Binding DisplayMonth}" FontSize="30"/>
+            <Button Content="Следующий месяц >>" Margin="5" FontSize="20"/>
         </StackPanel>
         <ItemsControl ItemsSource="{Binding Dates}" Grid.Row="1">
             <ItemsControl.ItemsPanel>

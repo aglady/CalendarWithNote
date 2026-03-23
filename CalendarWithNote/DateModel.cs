@@ -9,7 +9,7 @@ namespace CalendarWithNote
     internal class DateModel
     {
         public DateTime Day { get; set; }
-        public DayOfWeek WeekDay { get; set; }
+        //public DayOfWeek WeekDay { get; set; }
 
        // public bool HasNote { get; set; }
     }

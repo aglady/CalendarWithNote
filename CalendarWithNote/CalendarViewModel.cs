@@ -29,6 +29,8 @@ namespace CalendarWithNote
                 OnPropertyChanged(nameof(CurrentMonth));
             }
         }
+
+        public string DisplayMonth => CurrentMonth.ToString("MMMM yyyy");
         public List<DateModel> Dates
         {
             get { return dates; }
@@ -41,7 +43,7 @@ namespace CalendarWithNote
         private void LoadCalendar()
         {
             var daysInMonth = DateTime.DaysInMonth(currentMonth.Year, currentMonth.Month);
-            var startDay = new DateTime(currentMonth.Year, currentMonth.Month, 1).DayOfWeek;
+            //var startDay = new DateTime(currentMonth.Year, currentMonth.Month, 1).DayOfWeek;
 
             var calendarDates = new List<DateModel>();
             
@@ -50,7 +52,7 @@ namespace CalendarWithNote
                 var date = new DateModel()
                 {
                     Day = new DateTime(currentMonth.Year, currentMonth.Month, day),
-                    WeekDay = (DayOfWeek)(((int)startDay + day - 1) % 7)
+                   //WeekDay = (DayOfWeek)(((int)startDay + day - 1) % 7)
                 };
                 calendarDates.Add(date);
             }
